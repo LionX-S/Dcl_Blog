@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar/NavBar'
+import AllRouter from './router/routers';
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <NavBar/>
+      <AllRouter/>
     </>
   )
 }
