@@ -1,27 +1,23 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../views/home/home";
+import { Navigate, createBrowserRouter } from "react-router-dom";
+import App from "../App";
+import Home from "../views/home/Home";
+import ErrorPage from "../error-page";
 
-// const AllRouter = () => {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route index element={<Home/>}/>
-//       </Routes>
-//     </BrowserRouter>
-//   )
-// }
-
-import { useRoutes, Navigate } from "react-router-dom";
-
-const AllRouter = () =>
-	useRoutes([
-		{
-			path: "/",
-			element: <Navigate to='/home' />
-		},
-		{
-			path: "/home",
-			element: <Home />
-		}
-	]);
+const AllRouter = createBrowserRouter([
+	{
+		path: "/",
+		element: <App />,
+		children: [
+			{
+				path: "/",
+				element: <Navigate to='/home' />
+			},
+			{
+				path: "/home",
+				element: <Home />
+			}
+		],
+		errorElement: <ErrorPage />
+	}
+]);
 export default AllRouter;

@@ -7,7 +7,11 @@ import {
 
 export default defineConfig({
   shortcuts: [
-    // ...
+    // 导航栏item
+    {
+      nav_container: 'flex-none h-full leading-18',
+      nav_item: 'w-32 list-none hover:bg-slate-3'
+    }
   ],
   theme: {
     colors: {
@@ -26,6 +30,8 @@ export default defineConfig({
       extraProperties: {
         'display': 'inline-block',
         'vertical-align': 'middle',
+        'width': '32px',
+        'height': '32px'
       }
     }),
     presetTypography(),
