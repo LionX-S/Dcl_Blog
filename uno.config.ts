@@ -10,7 +10,8 @@ export default defineConfig({
     // 导航栏item
     {
       nav_container: 'flex-none h-full leading-18',
-      nav_item: 'w-32 list-none hover:bg-slate-3'
+      nav_item: 'w-32 list-none hover:bg-slate-3',
+      icon_babel_time: 'w-30 text-center bg-blue-200 border-rounded color-blue-500 font-300 font-size-3.5'
     }
   ],
   theme: {
@@ -30,8 +31,8 @@ export default defineConfig({
       extraProperties: {
         'display': 'inline-block',
         'vertical-align': 'middle',
-        'width': '32px',
-        'height': '32px'
+        'width': '1rem',
+        'height': '1rem',
       }
     }),
     presetTypography(),

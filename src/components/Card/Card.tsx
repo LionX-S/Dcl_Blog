@@ -1,3 +1,4 @@
+import Icon from "../Icon/Icon";
 const Card = () => {
 	return (
 		<figure className='flex flex-col md:flex-row md:mx-auto bg-slate-200 rounded-xl p-0 dark:bg-slate-800 max-w-3xl mt-10'>
@@ -10,6 +11,11 @@ const Card = () => {
 			</div>
 			<div className='flex-1 pt-6 md:p-8 text-center md:text-left space-y-4'>
 				<blockquote>
+					<Icon
+						type='iconBabelTime'
+						iconType='i-mdi:clock-outline'>
+						2023-08-24
+					</Icon>
 					<p className='text-lg font-medium'>
 						“Tailwind CSS is the only framework that I've seen scale on large
 						teams. It’s easy to customize, adapts to any design, and the build
